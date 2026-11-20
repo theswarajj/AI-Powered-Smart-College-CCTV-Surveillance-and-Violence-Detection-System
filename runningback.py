@@ -74,10 +74,10 @@ log = logging.getLogger("FightDetect")
 @dataclass
 class Config:
     # Paths
-    model_path:    str = r"C:\Users\swrjk\OneDrive\Desktop\SREEPATHY\runs\exp1\best.pth"
+    model_path:    str = os.environ.get("MODEL_PATH", "./runs/exp1/best.pth")
     yolo_model:    str = "yolov8n.pt"
     tracker_cfg:   str = "bytetrack.yaml"
-    video_source:  str = "fight.mp4"   # 0 = webcam
+    video_source:  str = "input_fight.mp4"   # 0 = webcam, or file path
     alert_dir:     str = "./alerts"
     face_db_dir:   str = "./face_db"
 
@@ -905,9 +905,9 @@ class FightDetectionPipeline:
 
 def parse_args():
     p = argparse.ArgumentParser(description="VisionGuard — Real-Time Fight Detection")
-    p.add_argument("--model",     default=r"C:\Users\swrjk\OneDrive\Desktop\SREEPATHY\runs\exp1\best.pth",
+    p.add_argument("--model",     default=os.environ.get("MODEL_PATH", "./runs/exp1/best.pth"),
                    help="Path to fine-tuned PyTorch checkpoint")
-    p.add_argument("--source",    default="fight.mp4",
+    p.add_argument("--source",    default="input_fight.mp4",
                    help="Video source: file path or 0 for webcam")
     p.add_argument("--yolo",      default="yolov8n.pt")
     p.add_argument("--tracker",   default="bytetrack.yaml")

@@ -1,16 +1,117 @@
-# dependencies
+# =====================================================================
+# GitIgnore for SentinelX AI - CCTV Surveillance & Violence Detection
+# =====================================================================
+
+# --- Datasets (Raw & Preprocessed) ---
+# Very large datasets (~13GB+) that must not be committed to GitHub
+RWF-2000/
+rwf_processed/
+data/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# --- Heavy Model Weights & Training Checkpoints (>100MB limit) ---
+# SlowFast pretrained .pkl (263MB) and fine-tuned checkpoints .pth (385MB)
+# Note: Use `python loadpretrained.py` to download SlowFast Kinetics-400 weights.
+checkpoints/
+runs/
+*.pth
+*.pkl
+*.h5
+*.onnx
+# Exception: keep lightweight YOLO detection weights (6.5MB)
+!yolov8n.pt
+
+# --- Python & Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs & Debugging
+*.log
+error_log.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Frontend (Node.js & Next.js) ---
 node_modules/
 */node_modules/
+**/node_modules/
+.pnp
+.pnp.js
 
-# next.js build
+# Next.js Build & Turbopack Cache
 .next/
 */.next/
+**/.next/
 out/
 */out/
 
-# env files
+# TypeScript Build Cache
+*.tsbuildinfo
+
+# --- Runtime Alert Artifacts ---
+# Ignore generated runtime snapshot crops, but keep directory structure
+alerts/*.jpg
+alerts/*.png
+!alerts/.gitkeep
+
+# --- Face Database Enrollment ---
+# Keep directory structure for enrollment, but ignore personal enrollment images
+face_db/**/*.jpg
+face_db/**/*.jpeg
+face_db/**/*.png
+!face_db/**/.gitkeep
+!face_db/.gitkeep
+
+# --- Environment & Secrets ---
 .env
 .env*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# cache
-*.tsbuildinfo
+# --- IDE & OS Metadata ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Explicitly Allowed Media Files ---
+# Showcase media for repository presentation (<40MB)
+!input_fight.mp4
+!output_fight.mp4
