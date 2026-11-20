@@ -18,11 +18,11 @@ Key upgrades over old code:
   7. All components cleanly separated into classes
 
 Usage:
-    python3 runningback.py \\
-        --model       C:\\Users\\swrjk\\OneDrive\\Desktop\\SREEPATHY\\runs\\exp1\\best.pth \\
-        --source      fight.mp4 \\
-        --yolo        yolov8n.pt \\
-        --face_db     ./face_db \\
+    python3 runningback.py \
+        --model       ./runs/exp1/best.pth \
+        --source      input_fight.mp4 \
+        --yolo        yolov8n.pt \
+        --face_db     ./face_db \
         --alert_dir   ./alerts
 """
 

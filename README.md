@@ -11,6 +11,8 @@
 ![Next.js](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB.svg?logo=react&logoColor=black)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC.svg?logo=tailwind-css&logoColor=white)
+![Author](https://img.shields.io/badge/Author-Swaraj%20Krishna%20P%20P-brightgreen.svg)
+![Education](https://img.shields.io/badge/KTU-Class%20of%202026-blueviolet.svg)
 
 **An end-to-end intelligent campus security framework integrating real-time human detection, spatial-temporal action recognition, facial identification, and an enterprise management dashboard.**
 
@@ -337,7 +339,16 @@ Open your browser and navigate to **`http://localhost:3000`** to access the dash
 
 ## 👤 Author & Acknowledgments
 
-**Developed by**: Swaraj Krishna  
-**Project**: AI-Powered Smart College CCTV Surveillance and Violence Detection System (SentinelX AI)  
+### Developed & Engineered by
+**Swaraj Krishna P P**  
+AI / ML Enthusiast & Computer Science and Engineering Graduate (Class of 2026)  
+🎓 **APJ Abdul Kalam Technological University (KTU)**  
+📬 **Email**: [swrjkrishna@gmail.com](mailto:swrjkrishna@gmail.com)  
 
-*Special thanks to the authors and open-source contributors of PyTorch, PyTorchVideo, Ultralytics YOLOv8, ByteTrack, InsightFace, and the creators of the RWF-2000 dataset for advancing computer vision in public safety.*
+> [!IMPORTANT]
+> All conceptualization, full-stack architecture, machine learning modeling, and platform engineering credits for this project belong to **Swaraj Krishna P P**.
+
+---
+
+### Acknowledgments
+Special thanks to the authors and open-source contributors of PyTorch, PyTorchVideo, Ultralytics YOLOv8, ByteTrack, InsightFace, and the creators of the RWF-2000 dataset for advancing computer vision in public safety.
